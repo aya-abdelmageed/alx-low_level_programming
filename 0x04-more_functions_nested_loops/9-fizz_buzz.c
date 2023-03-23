@@ -11,18 +11,20 @@
 int main(void)
 {
 	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 5 == 0)
-			printf("%s", b);
+		{
+			if (i == 100)
+				printf("Buzz");
+			else
+				printf("Buzz ");
+		}
 		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", fb);
+			printf("FizzBuzz ");
 		else if (i % 3 == 0)
-			printf("%s ", f);
+			printf("Fizz ");
 		else
 			printf("%d ", i);
 	}
