@@ -3,12 +3,13 @@
 /**
  * _atoi - convert a string to an integer
  * @s: pointer
- * return: integer
+ * Return: integer
  */
 
 int _atoi(char *s)
 {
-	int sign = 1, num = 0;
+	int sign = 1;
+	unsigned int num = 0;
 
 	do {
 		if (*s == '-')
