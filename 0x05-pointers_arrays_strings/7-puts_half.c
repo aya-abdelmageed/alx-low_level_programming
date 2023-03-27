@@ -11,10 +11,9 @@ void puts_half(char *str)
 	int c = 0;
 	int i, j;
 
-	while (*str != '\0')
+	while (str[c] != '\0')
 	{
 		c++;
-		str++;
 	}
 
 	if (c % 2 == 0)
