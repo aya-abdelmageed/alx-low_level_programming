@@ -10,11 +10,10 @@ void print_rev(char *s)
 {
 	int c = 0;
 
-	while (*s != '\0')
+	while (s[c] != '\0')
 	{
 		c++;
 	}
-
 	while (c)
 	{
 		_putchar(s[c - 1]);
