@@ -20,10 +20,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		l = len1;
 	else
 		l = len2;
-	if ((l + 1) >= size_r)
+	if ((l + 1) > size_r)
 		return (0);
-	r[l + 1] = '\0';
-	for (k = l - 1; k > = 0; k--)
+	r[l] = '\0';
+	for (k = l - 1; k >= 0; k--)
 	{
 		len1--;
 		len2--;
