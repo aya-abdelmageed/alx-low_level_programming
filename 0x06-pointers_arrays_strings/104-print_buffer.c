@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * print_buffer - function that print abuffer
- * @b: pointer to string
- * @size: size of buffers to be print
- * Return: buffer
+ * isprintableAscii - check if has Ascii
+ * @n: input
+ * Return: ascii num
  */
 
 int isprintableAscii(int n)
@@ -12,6 +11,13 @@ int isprintableAscii(int n)
 	return (n >= 32 && n <= 126);
 }
 
+/**
+ * printHexes - print hex num
+ * @b: input pointer
+ * @start: start index
+ * @end: end index
+ * Return: void
+ */
 void printHexes(char *b, int start, int end)
 {
 	int i = 0;
@@ -28,6 +34,13 @@ void printHexes(char *b, int start, int end)
 	}
 }
 
+/**
+ * printAscii - Ascii number
+ * @b: input string
+ * @start: start pointer
+ * @end: end pointer
+ */
+
 void printAscii(char *b, int start, int end)
 {
 	int ch, i = 0;
@@ -42,6 +55,12 @@ void printAscii(char *b, int start, int end)
 	}
 }
 
+/**
+ * print_buffer - function that print abuffer
+ * @b: pointer to string
+ * @size: size of buffers to be print
+ * Return: buffer
+ */
 
 void print_buffer(char *b, int size)
 {
