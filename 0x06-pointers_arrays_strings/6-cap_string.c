@@ -9,27 +9,23 @@
 char *cap_string(char *str)
 {
 	int i = 0, j;
-	bool flag = 1;
 	int a[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	while (*(str + i) != '\0')
 	{
-		if (flag)
+		if (*(str + i) >= 'a' && *(str + i) <= 'z')
 		{
-			if (*(str + i) >= 'a' && *(str + i) <= 'z')
-			{
+			if (i == 0)
 				*(str + i) = *(str + i) - 32;
-				flag = 0;
-			}
-		}
-		else
-		{
-			for (j = 0; j < 13; j++)
+			else
 			{
-				if (*(str + i) == a[j])
+				for (j = 0; j < 13; j++)
 				{
-					flag = 0;
-					break;
+					if (*(str + i - 1) == a[j])
+					{
+						*(str + i) = *(str + i) - 32;
+						break;
+					}
 				}
 			}
 		}
