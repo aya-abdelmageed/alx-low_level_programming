@@ -10,15 +10,16 @@
 void print_diagsums(int *a, int size)
 {
 	int i, k = size - 1, l = 0, sum1 = 0, sum2 = 0;
+	int *p = a;
 
 	for (i = 0; i < size; i++)
 	{
-		sum1 += *(a[i] + i);
+		sum1 += *(p + i * size + i);
 	}
 
 	while (l < size)
 	{
-		sum2 += *(a[l] + k);
+		sum2 += *(p + l * size + k);
 		l++;
 		k--;
 	}
