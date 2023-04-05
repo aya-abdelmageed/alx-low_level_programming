@@ -2,18 +2,18 @@
 
 /**
  * prime - to check prime num
- * @n: input number
+ * @y: input number
  * @x: iterator
  * return: 0 or 1
  */
 
-int prime(int n, int x)
+int prime(int y, int x)
 {
-	if (n == x)
+	if (y == x)
 		return (1);
-	if (n % x == 0)
+	if (y % x == 0)
 		return (0);
-	return (prime(n, x + 1));
+	return (prime(y, x + 1));
 }
 
 /**
