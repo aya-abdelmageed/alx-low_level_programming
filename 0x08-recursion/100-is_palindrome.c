@@ -14,7 +14,7 @@ int check(char *s, int l, int i)
 		return (0);
 	if (i >= (l - i - 1))
 		return (1);
-	return (s, l, i + 1);
+	return (check(s, l, i + 1));
 }
 
 /**
