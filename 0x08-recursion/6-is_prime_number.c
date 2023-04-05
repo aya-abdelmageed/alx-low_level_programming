@@ -4,7 +4,7 @@
  * prime - to check prime num
  * @y: input number
  * @x: iterator
- * return: 0 or 1
+ * Return: 0 or 1
  */
 
 int prime(int y, int x)
