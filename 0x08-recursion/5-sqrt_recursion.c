@@ -22,7 +22,9 @@ int sqroot(int n, int x)
 
 int _sqrt_recursion(int n)
 {
-	if (n % 2 != 0)
+	if (n == 1)
+		return (1);
+	if (n < 1 || n % 2 != 0)
 		return (-1);
 	return (sqroot(n, 1));
 }
