@@ -30,13 +30,15 @@ char *_strdup(char *str)
 	int size, i;
 	char *new;
 
-	if (*str == '\0')
+	if (str == NULL)
 		return (NULL);
 
-	size = lenstr(str);
+	size = lenstr(str) + 1;
 
-	new = malloc(size * sizeof(char) + 1);
-	for (i = 0; i <= size; i++)
+	new = malloc(size * sizeof(char));
+	if (new == NULL)
+		return (NULL);
+	for (i = 0; i < size; i++)
 		new[i] = str[i];
 	return (new);
 	free(new);
