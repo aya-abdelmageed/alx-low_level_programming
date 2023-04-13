@@ -48,16 +48,11 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
+		printf("Error\n");
 		exit(98);
 	}
 
-	_ptint(_atoi(argv[1] * argv[2]));
+	_print(_atoi(argv[1] * argv[2]));
 	_putchar('\n');
 	return (0);
 }
