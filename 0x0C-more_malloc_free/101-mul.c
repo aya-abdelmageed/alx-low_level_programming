@@ -11,12 +11,18 @@ int _atoi(char *s)
 	int sign = 1;
 	unsigned long int num = 0;
 
-	do {
-		if (*s == '-')
-			sign *= -1;
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
-	} while (*s++);
+	if (*s == '-')
+	{
+		sign *= -1;
+		s++;
+	}
+	else
+	{
+		do {
+			if (*s >= '0' && *s <= '9')
+				num = (num * 10) + (*s - '0');
+		} while (s++);
+	}
 	return (num * sign);
 }
 /**
@@ -48,7 +54,12 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_putchar('E')
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar('\n');
 		exit(98);
 	}
 
