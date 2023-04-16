@@ -39,9 +39,9 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-
 	w = words(str);
-
+	if (w == 0)
+		return (NULL);
 	ar = (char **) malloc((w + 1) * sizeof(char *));
 
 	if (ar == NULL)
