@@ -22,7 +22,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n > 0)
 		printf("%s", va_arg(v, char *));
-	for (i = 0; i < n; i++)
+	for (i = 1; i < n; i++)
 	{
 		ptr = va_arg(v, char *);
 		if (ptr == NULL)
