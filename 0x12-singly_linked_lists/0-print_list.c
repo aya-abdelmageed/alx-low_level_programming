@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", 0, "(nil)");
 		count++;
-		head= head->next;
+		head = head->next;
 	}
 	return (count);
 }
