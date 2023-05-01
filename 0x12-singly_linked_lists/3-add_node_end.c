@@ -29,6 +29,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	node->str = s;
 	node->len = l;
 	node->next = NULL;
+	if (head->next == NULL)
+	{
+		head->next = node;
+		return (*head);
+	}
 
 	h = *head;
 
