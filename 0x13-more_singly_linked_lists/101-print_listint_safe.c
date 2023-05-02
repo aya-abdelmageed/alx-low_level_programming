@@ -6,10 +6,10 @@
  *
  * Return: no return.
  */
-void free_mylist(listint_t **head)
+void free_mylist(listp_t **head)
 {
-	listint_t *temp;
-	listint_t *curr;
+	listp_t *temp;
+	listp_t *curr;
 
 	if (head != NULL)
 	{
@@ -32,7 +32,7 @@ void free_mylist(listint_t **head)
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nnodes = 0;
-	listint_t *hptr, *new, *add;
+	listp_t *hptr, *new, *add;
 
 	hptr = NULL;
 	while (head != NULL)
